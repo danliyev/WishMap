@@ -15,7 +15,7 @@ npm install @danliyev/wishmap
 ## Usage
 
 ```typescript
-import { WishMap } from 'wishmap'
+import { WishMap } from '@danliyev/wishmap'
 
 const map = new WishMap<string, number>()
 
