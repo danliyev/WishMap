@@ -4,7 +4,7 @@ An extended `Map` with Array-like methods and event emission.
 
 # Links
 
-[API Docs](https://danliyev.github.io/wishmap)
+[API Docs](https://danliyev.github.io/WishMap)
 
 ## Installation
 
