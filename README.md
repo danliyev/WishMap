@@ -9,7 +9,7 @@ An extended `Map` with Array-like methods and event emission.
 ## Installation
 
 ```bash
-npm install wishmap
+npm install @danliyev/wishmap
 ```
 
 ## Usage
