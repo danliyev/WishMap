@@ -6,6 +6,7 @@ on:
       - 'v*'
 
 permissions:
+  contents: read
   id-token: write
   packages: write
 
@@ -13,8 +14,8 @@ jobs:
   publish-ghp:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
         with:
           node-version: 22
           registry-url: https://npm.pkg.github.com/
@@ -28,14 +29,13 @@ jobs:
   publish-npm:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
         with:
           node-version: 22
           registry-url: https://registry.npmjs.org/
           scope: '@danliyev'
       - run: npm ci
       - run: npm run build
-      - run: |
-          NODE_AUTH_TOKEN=""
-          npm publish --access public
+      - name: Publish
+        run: NODE_AUTH_TOKEN="" npm publish --access public
