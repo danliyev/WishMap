@@ -8,7 +8,11 @@ import { EventEmitter } from 'node:events'
  */
 export class WishMap<K, V> extends Map<K, V> {
     /** Event emitter for map mutations */
-    public events: EventEmitter<WishMapEvents<K, V>> = new EventEmitter()
+    public readonly events: EventEmitter<WishMapEvents<K, V>> = new EventEmitter()
+
+    public on = this.events.on
+    public once = this.events.once
+    public off = this.events.off
 
     /**
      * Removes the specified element from the map.
