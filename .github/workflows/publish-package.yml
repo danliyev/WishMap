@@ -41,3 +41,5 @@ jobs:
         run: >
           unset NODE_AUTH_TOKEN &&
           npm publish --access public --provenance
+        env:
+          NODE_AUTH_TOKEN: ''
