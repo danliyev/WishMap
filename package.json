@@ -1,6 +1,6 @@
 {
   "name": "@danliyev/wishmap",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "An extended JavaScript Map with Array-like methods and event emission.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
